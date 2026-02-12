@@ -11,30 +11,26 @@ import Located
 
 @main
 struct PacrWatch_Watch_AppApp: App {
-    @StateObject var locationManager = {
+    @StateObject private var locationManager: LocationManager
+    @State private var tracker: Tracker
+
+    init() {
         let manager = CLLocationManager()
-        return LocationManager(manager: manager) { manager, delegate in
+        let locatedManager = LocationManager(manager: manager) { manager, delegate in
             manager.delegate = delegate
             manager.desiredAccuracy = kCLLocationAccuracyBest
             manager.distanceFilter = kCLDistanceFilterNone
             manager.activityType = .fitness
         }
-    }()
 
-    @State var value: Double = 0
-    
+        _locationManager = StateObject(wrappedValue: locatedManager)
+        _tracker = State(initialValue: Tracker(locationManager: locatedManager))
+    }
+
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: .init(measurement: .init(value: value, unit: .meters)))
+            ContentView(tracker: tracker)
                 .environmentObject(locationManager)
-                .task {
-                    let ticks = Timer.publish(every: 1, on: .main, in: .common)
-                        .autoconnect()
-                        .values
-                    for await _ in ticks {
-                        value += 1
-                    }
-                }
         }
     }
 }

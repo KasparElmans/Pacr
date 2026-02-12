@@ -1,5 +1,5 @@
 //
-//  PacrApp.swift
+//  App.swift
 //  Pacr
 //
 //  Created by Kaspar Elmans on 18/09/2025.
