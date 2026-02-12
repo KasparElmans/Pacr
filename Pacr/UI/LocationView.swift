@@ -89,6 +89,27 @@ struct LocationView: View {
                                     .background(.ultraThinMaterial, in: Capsule())
                             }
                         }
+                        .overlay(alignment: .topTrailing) {
+                            Button {
+                                updateMapPosition(force: true)
+                            } label: {
+                                Image(systemName: "location.north.fill")
+                                    .font(.headline.weight(.semibold))
+                                    .frame(width: 44, height: 44)
+                                    .contentShape(Circle())
+                            }
+                            .buttonStyle(.plain)
+                            .foregroundStyle(.primary)
+                            .background(.ultraThinMaterial, in: Circle())
+                            .overlay {
+                                Circle()
+                                    .stroke(Color.white.opacity(0.2), lineWidth: 0.8)
+                            }
+                            .shadow(color: .black.opacity(0.18), radius: 8, x: 0, y: 4)
+                            .padding(8)
+                            .accessibilityLabel("Recenter map")
+                            .disabled(tracker.locations.isEmpty)
+                        }
                         .frame(height: 190)
                         .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
                     }
@@ -106,7 +127,7 @@ struct LocationView: View {
         .onAppear {
             tracker.start()
             isTracking = true
-            updateMapPosition()
+            updateMapPosition(force: false)
         }
         .onAppear {
             // Start a repeating timer that fires every 0.5s
@@ -349,13 +370,32 @@ struct LocationView: View {
         if currentCount != lastKnownLocationCount {
             lastKnownLocationCount = currentCount
             updateDate = Date()
-            updateMapPosition()
+            updateMapPosition(force: false)
         }
     }
 
-    private func updateMapPosition() {
+    private func updateMapPosition(force: Bool) {
         guard let region = mapRegion(for: tracker.locations) else { return }
+        if force {
+            withAnimation(.easeInOut(duration: 0.25)) {
+                mapPosition = .camera(
+                    MapCamera(
+                        centerCoordinate: region.center,
+                        distance: mapCameraDistance(for: region)
+                    )
+                )
+            }
+            return
+        }
         mapPosition = .region(region)
+    }
+
+    private func mapCameraDistance(for region: MKCoordinateRegion) -> CLLocationDistance {
+        let metersPerDegreeLatitude = 111_000.0
+        let latMeters = region.span.latitudeDelta * metersPerDegreeLatitude
+        let lonMeters = region.span.longitudeDelta * metersPerDegreeLatitude * abs(cos(region.center.latitude * .pi / 180))
+        let maxSpanMeters = max(latMeters, lonMeters)
+        return max(maxSpanMeters * 1.6, 250)
     }
 
     private func mapRegion(for locations: [CLLocation]) -> MKCoordinateRegion? {
