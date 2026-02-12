@@ -19,6 +19,11 @@ struct RunningPaceApp: App {
             manager.distanceFilter = kCLDistanceFilterNone
             manager.activityType = .fitness
             manager.pausesLocationUpdatesAutomatically = false
+            let backgroundModes = Bundle.main.object(forInfoDictionaryKey: "UIBackgroundModes") as? [String]
+            if backgroundModes?.contains("location") == true {
+                manager.allowsBackgroundLocationUpdates = true
+                manager.showsBackgroundLocationIndicator = true
+            }
         }
     }()
     

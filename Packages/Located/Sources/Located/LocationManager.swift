@@ -48,7 +48,10 @@ public final class LocationManager: NSObject, ObservableObject, CLLocationManage
     public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         DispatchQueue.main.async {
             self.authorizationStatus = status
-            if status == .authorizedWhenInUse || status == .authorizedAlways {
+            if status == .authorizedWhenInUse {
+                self.manager.requestAlwaysAuthorization()
+                self.start()
+            } else if status == .authorizedAlways {
                 self.start()
             }
         }
