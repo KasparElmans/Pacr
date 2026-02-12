@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  WatchLocationView.swift
 //  PacrWatch Watch App
 //
 //  Created by Kaspar Elmans on 12/10/2025.
@@ -10,7 +10,7 @@ import Combine
 import CoreLocation
 import Located
 
-struct ContentView: View {
+struct WatchLocationView: View {
     @State var tracker: Tracker
 
     @State private var updateDate: Date?
@@ -215,7 +215,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(
+    WatchLocationView(
         tracker: Tracker(
             locationManager: LocationManager(manager: CLLocationManager()) { manager, delegate in
                 manager.delegate = delegate

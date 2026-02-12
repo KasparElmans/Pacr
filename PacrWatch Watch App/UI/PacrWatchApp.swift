@@ -29,7 +29,7 @@ struct PacrWatch_Watch_AppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView(tracker: tracker)
+            WatchLocationView(tracker: tracker)
                 .environmentObject(locationManager)
         }
     }
