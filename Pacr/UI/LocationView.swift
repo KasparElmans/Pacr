@@ -32,7 +32,7 @@ struct LocationView: View {
                 VStack(spacing: 24) {
                     // Header
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Pacr")
+                        Text("Tracker")
                             .font(.largeTitle.bold())
                         if let last = tracker.locations.last {
                             lastLocationCard(last: last, updateDate: updateDate)
