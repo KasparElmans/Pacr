@@ -1,0 +1,695 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedPackageTests.xctest/Contents/MacOS/LocatedPackageTests",
+      "packagePath" : "/Users/kasparelmans/Coding/Pacr/Packages/Located",
+      "productName" : "LocatedPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.Located-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/sources",
+      "importPath" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/Sources/Located/CLLocation+Extensions.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/Sources/Located/Formatters.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/Sources/Located/LocationManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/Sources/Located/Tracker.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/swift-version-58473CE9277CE06D.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "Located",
+      "moduleOutputPath" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Modules/Located.swiftmodule",
+      "objects" : [
+        "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/CLLocation+Extensions.swift.o",
+        "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/Formatters.swift.o",
+        "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/LocationManager.swift.o",
+        "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/Tracker.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/include/Located-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "located"
+      ],
+      "outputFileMapPath" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/CLLocation+Extensions.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/Formatters.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/LocationManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/Tracker.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Modules/Located.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/kasparelmans/Coding/Pacr/Packages/Located/Sources/Located/CLLocation+Extensions.swift",
+        "/Users/kasparelmans/Coding/Pacr/Packages/Located/Sources/Located/Formatters.swift",
+        "/Users/kasparelmans/Coding/Pacr/Packages/Located/Sources/Located/LocationManager.swift",
+        "/Users/kasparelmans/Coding/Pacr/Packages/Located/Sources/Located/Tracker.swift"
+      ],
+      "tempsPath" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.LocatedPackageTests-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedPackageTests.build/sources",
+      "importPath" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/swift-version-58473CE9277CE06D.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Modules/LocatedTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "LocatedPackageTests",
+      "moduleOutputPath" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Modules/LocatedPackageTests.swiftmodule",
+      "objects" : [
+        "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedPackageTests.build/include/LocatedPackageTests-Swift.h",
+        "-plugin-path",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "located"
+      ],
+      "outputFileMapPath" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Modules/LocatedPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedPackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.LocatedTests-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedTests.build/sources",
+      "importPath" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/Tests/LocatedTests/LocatedTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/swift-version-58473CE9277CE06D.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Modules/Located.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "LocatedTests",
+      "moduleOutputPath" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Modules/LocatedTests.swiftmodule",
+      "objects" : [
+        "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedTests.build/LocatedTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "located"
+      ],
+      "outputFileMapPath" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedTests.build/LocatedTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Modules/LocatedTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/kasparelmans/Coding/Pacr/Packages/Located/Tests/LocatedTests/LocatedTests.swift"
+      ],
+      "tempsPath" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "Located" : [
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "Located",
+      "-package-name",
+      "located",
+      "-c",
+      "/Users/kasparelmans/Coding/Pacr/Packages/Located/Sources/Located/CLLocation+Extensions.swift",
+      "/Users/kasparelmans/Coding/Pacr/Packages/Located/Sources/Located/Formatters.swift",
+      "/Users/kasparelmans/Coding/Pacr/Packages/Located/Sources/Located/LocationManager.swift",
+      "/Users/kasparelmans/Coding/Pacr/Packages/Located/Sources/Located/Tracker.swift",
+      "-I",
+      "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx10.13",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/include/Located-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "located",
+      "-driver-use-frontend-path",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "LocatedPackageTests" : [
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "LocatedPackageTests",
+      "-package-name",
+      "located",
+      "-c",
+      "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedPackageTests.derived/runner.swift",
+      "-I",
+      "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx10.13",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedPackageTests.build/include/LocatedPackageTests-Swift.h",
+      "-plugin-path",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "located",
+      "-driver-use-frontend-path",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "LocatedTests" : [
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "LocatedTests",
+      "-package-name",
+      "located",
+      "-c",
+      "/Users/kasparelmans/Coding/Pacr/Packages/Located/Tests/LocatedTests/LocatedTests.swift",
+      "-I",
+      "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "located",
+      "-driver-use-frontend-path",
+      "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "Located" : [
+
+    ],
+    "LocatedPackageTests" : [
+      "LocatedTests",
+      "Located"
+    ],
+    "LocatedTests" : [
+      "Located"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+    "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedPackageTests.derived/runner.swift" : {
+      "inputs" : [
+
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedPackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/Sources/Located/CLLocation+Extensions.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/Sources/Located/Formatters.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/Sources/Located/LocationManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/Sources/Located/Tracker.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/sources"
+    },
+    "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedPackageTests.build/sources"
+    },
+    "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/CLLocation+Extensions.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/Formatters.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/LocationManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/Tracker.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedTests.build/LocatedTests.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedPackageTests.product/Objects.LinkFileList"
+    },
+    "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/Tests/LocatedTests/LocatedTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedTests.build/sources"
+    },
+    "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/swift-version-58473CE9277CE06D.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kasparelmans/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/swift-version-58473CE9277CE06D.txt"
+    }
+  }
+}

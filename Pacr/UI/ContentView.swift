@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 import CoreLocation
+import Located
 
 struct ContentView: View {
     @State var tracker: Tracker
@@ -295,4 +296,3 @@ struct ContentView: View {
         distanceText = String("\(tracker.locations.distance ?? 0)") + " m"
     }
 }
-

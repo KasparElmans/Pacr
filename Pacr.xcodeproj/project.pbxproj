@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8FB378592E9BA1770098747F /* PacrWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8FB3784F2E9BA1750098747F /* PacrWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		90E3C0032F5F000100AABBCC /* Located in Frameworks */ = {isa = PBXBuildFile; productRef = 90E3C0022F5F000100AABBCC /* Located */; };
+		90E3C0042F5F000100AABBCC /* Located in Frameworks */ = {isa = PBXBuildFile; productRef = 90E3C0052F5F000100AABBCC /* Located */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,11 @@
 			path = "PacrWatch Watch App";
 			sourceTree = "<group>";
 		};
+		90E3C0062F5F000100AABBCC /* Packages */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Packages;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90E3C0032F5F000100AABBCC /* Located in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90E3C0042F5F000100AABBCC /* Located in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				8F8BA9842E7C216E006AF156 /* Pacr */,
+				90E3C0062F5F000100AABBCC /* Packages */,
 				8FB378502E9BA1750098747F /* PacrWatch Watch App */,
 				8F8BA9832E7C216E006AF156 /* Products */,
 			);
@@ -118,6 +128,7 @@
 			);
 			name = Pacr;
 			packageProductDependencies = (
+				90E3C0022F5F000100AABBCC /* Located */,
 			);
 			productName = Pacr;
 			productReference = 8F8BA9822E7C216E006AF156 /* Pacr.app */;
@@ -140,6 +151,7 @@
 			);
 			name = "PacrWatch Watch App";
 			packageProductDependencies = (
+				90E3C0052F5F000100AABBCC /* Located */,
 			);
 			productName = "PacrWatch Watch App";
 			productReference = 8FB3784F2E9BA1750098747F /* PacrWatch Watch App.app */;
@@ -172,6 +184,9 @@
 			);
 			mainGroup = 8F8BA9792E7C216D006AF156;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				90E3C0012F5F000100AABBCC /* XCLocalSwiftPackageReference "Packages/Located" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8F8BA9832E7C216E006AF156 /* Products */;
 			projectDirPath = "";
@@ -504,6 +519,26 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		90E3C0012F5F000100AABBCC /* XCLocalSwiftPackageReference "Packages/Located" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Located;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		90E3C0022F5F000100AABBCC /* Located */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90E3C0012F5F000100AABBCC /* XCLocalSwiftPackageReference "Packages/Located" */;
+			productName = Located;
+		};
+		90E3C0052F5F000100AABBCC /* Located */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90E3C0012F5F000100AABBCC /* XCLocalSwiftPackageReference "Packages/Located" */;
+			productName = Located;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8F8BA97A2E7C216D006AF156 /* Project object */;
 }

@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedTests.build/master.swiftdeps"
+  },
+  "/Users/kasparelmans/Coding/Pacr/Packages/Located/Tests/LocatedTests/LocatedTests.swift": {
+    "dependencies": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedTests.build/LocatedTests.d",
+    "object": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedTests.build/LocatedTests.swift.o",
+    "swiftmodule": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedTests.build/LocatedTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedTests.build/LocatedTests.swiftdeps",
+    "diagnostics": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/LocatedTests.build/LocatedTests.dia"
+  }
+}

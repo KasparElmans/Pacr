@@ -1,0 +1,33 @@
+{
+  "": {
+    "swift-dependencies": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/master.swiftdeps"
+  },
+  "/Users/kasparelmans/Coding/Pacr/Packages/Located/Sources/Located/CLLocation+Extensions.swift": {
+    "dependencies": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/CLLocation+Extensions.d",
+    "object": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/CLLocation+Extensions.swift.o",
+    "swiftmodule": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/CLLocation+Extensions~partial.swiftmodule",
+    "swift-dependencies": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/CLLocation+Extensions.swiftdeps",
+    "diagnostics": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/CLLocation+Extensions.dia"
+  },
+  "/Users/kasparelmans/Coding/Pacr/Packages/Located/Sources/Located/Formatters.swift": {
+    "dependencies": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/Formatters.d",
+    "object": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/Formatters.swift.o",
+    "swiftmodule": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/Formatters~partial.swiftmodule",
+    "swift-dependencies": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/Formatters.swiftdeps",
+    "diagnostics": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/Formatters.dia"
+  },
+  "/Users/kasparelmans/Coding/Pacr/Packages/Located/Sources/Located/LocationManager.swift": {
+    "dependencies": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/LocationManager.d",
+    "object": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/LocationManager.swift.o",
+    "swiftmodule": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/LocationManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/LocationManager.swiftdeps",
+    "diagnostics": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/LocationManager.dia"
+  },
+  "/Users/kasparelmans/Coding/Pacr/Packages/Located/Sources/Located/Tracker.swift": {
+    "dependencies": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/Tracker.d",
+    "object": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/Tracker.swift.o",
+    "swiftmodule": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/Tracker~partial.swiftmodule",
+    "swift-dependencies": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/Tracker.swiftdeps",
+    "diagnostics": "/Users/kasparelmans/Coding/Pacr/Packages/Located/.build/arm64-apple-macosx/debug/Located.build/Tracker.dia"
+  }
+}

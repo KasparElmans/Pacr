@@ -6,12 +6,12 @@
 //
 
 import SwiftUI
+import Located
 
 class ChaserViewModel {
-//    var seconds: TimeInterval
     var measurement: Measurement<UnitLength>
     var scale: Double { measurement.value / 100 }
-    
+
     var status: Status {
         switch measurement.value {
         case 0...5: .almost
@@ -19,15 +19,15 @@ class ChaserViewModel {
         default: .almost
         }
     }
-    
+
     init(measurement: Measurement<UnitLength>) {
         self.measurement = measurement
     }
-    
+
     enum Status {
         case almost, far
     }
-    
+
     enum Sense {
         case falling, rising
     }
@@ -75,29 +75,6 @@ struct ContentView: View {
 
 #Preview {
     ContentView(viewModel: .init(measurement: .init(value: 39, unit: .meters)))
-}
-
-
-extension DateComponentsFormatter {
-    
-    static let secondsAndMinutes: DateComponentsFormatter = {
-        let formatter = DateComponentsFormatter()
-        formatter.allowedUnits = [.minute, .second]
-        formatter.unitsStyle = .abbreviated
-        return formatter
-    }()
-    
-}
-
-extension MeasurementFormatter {
-    
-    static let distance: MeasurementFormatter = {
-        let formatter = MeasurementFormatter()
-        formatter.unitOptions = .naturalScale
-        formatter.unitStyle = .short
-        formatter.numberFormatter.maximumFractionDigits = 1
-        return formatter
-    }()
 }
 
 struct FlippedModifier: ViewModifier {
