@@ -36,7 +36,7 @@ public extension Array where Element == CLLocation {
         for i in 1..<count {
             distance += self[i].distance(from: self[i - 1])
         }
-        return distance
+        return distance.rounded()
     }
 }
 

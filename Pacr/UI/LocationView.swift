@@ -1,5 +1,5 @@
 //
-//  ContetView.swift
+//  LocationView.swift
 //  Pacr
 //
 //  Created by Kaspar Elmans on 06/10/2025.
@@ -10,14 +10,14 @@ import Combine
 import CoreLocation
 import Located
 
-struct ContentView: View {
+struct LocationView: View {
     @State var tracker: Tracker
     
     @State private var updateDate: Date?
     @State private var showGPXShare = false
     @State var includeDebug = false
     @State private var paceText: String = "—"
-    @State private var distanceText: String = "0.0 m"
+    @State private var distanceText: String = "0 m"
     @State private var timer: AnyCancellable?
     
     @State private var cancellable: AnyCancellable? = nil
@@ -280,7 +280,7 @@ struct ContentView: View {
         now = Date()
         // Update metrics every tick
         paceText = tracker.pace
-        distanceText = String("\(tracker.locations.distance ?? 0)") + " m"
+        distanceText = "\(Int((tracker.locations.distance ?? 0).rounded())) m"
 
         // Only update the last update timestamp when a new location arrives
         let currentCount = tracker.locations.count

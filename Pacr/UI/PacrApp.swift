@@ -24,7 +24,7 @@ struct RunningPaceApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(tracker: Tracker(locationManager: locationManager))
+            LocationView(tracker: Tracker(locationManager: locationManager))
         }
     }
 }
