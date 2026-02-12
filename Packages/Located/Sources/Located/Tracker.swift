@@ -17,6 +17,8 @@ public final class Tracker {
 
     public func start() {
         locationManager.requestAuthorization()
+        // Ensure location updates resume after a previous stop/reset cycle.
+        locationManager.start()
         cancellable = locationManager.$debugLocations
             .map { [maxCount, maxAge] all -> [CLLocation] in
                 var locations = Array(all.suffix(maxCount))

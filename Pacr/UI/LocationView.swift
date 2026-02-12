@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 import CoreLocation
+import MapKit
 import Located
 
 struct LocationView: View {
@@ -15,7 +16,6 @@ struct LocationView: View {
     
     @State private var updateDate: Date?
     @State private var showGPXShare = false
-    @State var includeDebug = false
     @State private var paceText: String = "—"
     @State private var distanceText: String = "0 m"
     @State private var timer: AnyCancellable?
@@ -23,6 +23,8 @@ struct LocationView: View {
     @State private var cancellable: AnyCancellable? = nil
     @State private var lastKnownLocationCount: Int = 0
     @State private var now = Date()
+    @State private var isTracking = true
+    @State private var mapPosition: MapCameraPosition = .automatic
     
     var body: some View {
         NavigationStack {
@@ -38,9 +40,9 @@ struct LocationView: View {
                             VStack(alignment: .leading, spacing: 8) {
                                 HStack(spacing: 8) {
                                     Circle()
-                                        .fill(Color.red)
+                                        .fill(isTracking ? Color.red : Color.gray)
                                         .frame(width: 8, height: 8)
-                                    Text("Waiting for location…")
+                                    Text(isTracking ? "Waiting for location..." : "Tracking stopped")
                                         .font(.footnote)
                                         .foregroundStyle(.secondary)
                                 }
@@ -61,64 +63,51 @@ struct LocationView: View {
                     }
                     .padding(16)
                     .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                    
-                    Text("Controls")
-                        .font(.headline)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.top, 8)
 
-                    // Controls
-                    VStack(spacing: 12) {
-                        HStack(spacing: 12) {
-                            Button {
-                                tracker.start()
-                            } label: {
-                                labeledButtonLabel(title: "Start", systemImage: "play.fill")
-                            }
-                            .buttonStyle(.borderedProminent)
-                            .tint(.green)
+                    // Map Card
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("Track Map")
+                            .font(.headline)
 
-                            Button {
-                                tracker.stop()
-                            } label: {
-                                labeledButtonLabel(title: "Stop", systemImage: "stop.fill")
+                        ZStack {
+                            Map(position: $mapPosition) {
+                                ForEach(Array(tracker.locations.enumerated()), id: \.offset) { _, location in
+                                    Annotation("", coordinate: location.coordinate) {
+                                        Circle()
+                                            .fill(Color.accentColor)
+                                            .frame(width: 6, height: 6)
+                                    }
+                                }
                             }
-                            .buttonStyle(.borderedProminent)
-                            .tint(.red)
 
-                            Button {
-                                tracker.reset()
-                            } label: {
-                                labeledButtonLabel(title: "Reset", systemImage: "arrow.counterclockwise")
+                            if tracker.locations.isEmpty {
+                                Text("No locations yet")
+                                    .font(.footnote)
+                                    .foregroundStyle(.secondary)
+                                    .padding(.horizontal, 10)
+                                    .padding(.vertical, 6)
+                                    .background(.ultraThinMaterial, in: Capsule())
                             }
-                            .buttonStyle(.bordered)
                         }
-
-                        HStack(spacing: 12) {
-                            Button {
-                                includeDebug = false
-                                showGPXShare = true
-                            } label: {
-                                labeledButtonLabel(title: "Export GPX", systemImage: "square.and.arrow.up")
-                            }
-                            .buttonStyle(.bordered)
-
-                            Button {
-                                includeDebug = true
-                                showGPXShare = true
-                            } label: {
-                                labeledButtonLabel(title: "Export Debug", systemImage: "ladybug.fill")
-                            }
-                            .buttonStyle(.bordered)
-                        }
+                        .frame(height: 190)
+                        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
                     }
+                    .padding(16)
+                    .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                 }
                 .padding()
+            }
+            .safeAreaInset(edge: .bottom) {
+                bottomControlGrid
             }
             .navigationTitle("")
             .navigationBarHidden(true)
         }
-        .onAppear(perform: tracker.start)
+        .onAppear {
+            tracker.start()
+            isTracking = true
+            updateMapPosition()
+        }
         .onAppear {
             // Start a repeating timer that fires every 0.5s
             timer = Timer.publish(every: 0.5, on: .main, in: .common)
@@ -128,8 +117,10 @@ struct LocationView: View {
                 }
         }
         .sheet(isPresented: $showGPXShare) {
-            let locations = includeDebug ? tracker.locationManager.debugLocations : tracker.locationManager.recentLocations
-            GPXShareView(locations: locations, includeDebug: includeDebug)
+            GPXShareView(
+                gpxLocations: tracker.locationManager.recentLocations,
+                debugLocations: tracker.locationManager.debugLocations
+            )
                 .presentationDetents([.medium])
         }
     }
@@ -165,6 +156,70 @@ struct LocationView: View {
         .contentShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
     }
 
+    private var controlGridColumns: [GridItem] {
+        Array(repeating: GridItem(.flexible(), spacing: 8), count: 2)
+    }
+
+    @ViewBuilder
+    private var bottomControlGrid: some View {
+        LazyVGrid(columns: controlGridColumns, spacing: 8) {
+            if isTracking {
+                Button {
+                    tracker.stop()
+                    isTracking = false
+                } label: {
+                    compactControlLabel(title: "Stop", systemImage: "stop.fill")
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(.red)
+            } else {
+                Button {
+                    tracker.start()
+                    isTracking = true
+                } label: {
+                    compactControlLabel(title: "Start", systemImage: "play.fill")
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(.green)
+            }
+
+            Button {
+                showGPXShare = true
+            } label: {
+                compactControlLabel(title: "Export", systemImage: "square.and.arrow.up")
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.bordered)
+        }
+        .padding(12)
+        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
+                .stroke(Color.white.opacity(0.2), lineWidth: 1)
+        }
+        .shadow(color: .black.opacity(0.18), radius: 20, x: 0, y: 12)
+        .padding(.horizontal, 16)
+        .padding(.top, 6)
+        .padding(.bottom, 12)
+    }
+
+    @ViewBuilder
+    private func compactControlLabel(title: String, systemImage: String) -> some View {
+        VStack(spacing: 2) {
+            Image(systemName: systemImage)
+                .font(.caption.weight(.semibold))
+            Text(title)
+                .font(.caption2.weight(.semibold))
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
+        }
+        .padding(.vertical, 5)
+        .padding(.horizontal, 2)
+        .contentShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+    }
+
     @ViewBuilder
     private func lastLocationView(last: CLLocation) -> some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -198,7 +253,16 @@ struct LocationView: View {
                 Text("Last Location")
                     .font(.headline)
                 Spacer(minLength: 0)
-                if let updateDate {
+                if !isTracking {
+                    HStack(spacing: 6) {
+                        Circle()
+                            .fill(Color.gray)
+                            .frame(width: 8, height: 8)
+                        Text("Stopped")
+                            .font(.caption2)
+                            .foregroundStyle(.secondary)
+                    }
+                } else if let updateDate {
                     HStack(spacing: 6) {
                         Circle()
                             .fill(statusColor(for: updateDate))
@@ -278,16 +342,56 @@ struct LocationView: View {
 
     private func tick() {
         now = Date()
-        // Update metrics every tick
-        paceText = tracker.pace
-        distanceText = "\(Int((tracker.locations.distance ?? 0).rounded())) m"
-
+        updatePace()
+        
         // Only update the last update timestamp when a new location arrives
         let currentCount = tracker.locations.count
         if currentCount != lastKnownLocationCount {
             lastKnownLocationCount = currentCount
             updateDate = Date()
+            updateMapPosition()
         }
+    }
+
+    private func updateMapPosition() {
+        guard let region = mapRegion(for: tracker.locations) else { return }
+        mapPosition = .region(region)
+    }
+
+    private func mapRegion(for locations: [CLLocation]) -> MKCoordinateRegion? {
+        guard !locations.isEmpty else { return nil }
+
+        if locations.count == 1, let location = locations.first {
+            return MKCoordinateRegion(
+                center: location.coordinate,
+                span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+            )
+        }
+
+        let latitudes = locations.map { $0.coordinate.latitude }
+        let longitudes = locations.map { $0.coordinate.longitude }
+
+        guard
+            let minLat = latitudes.min(),
+            let maxLat = latitudes.max(),
+            let minLon = longitudes.min(),
+            let maxLon = longitudes.max()
+        else {
+            return nil
+        }
+
+        let center = CLLocationCoordinate2D(
+            latitude: (minLat + maxLat) / 2,
+            longitude: (minLon + maxLon) / 2
+        )
+
+        let latDelta = max((maxLat - minLat) * 1.5, 0.002)
+        let lonDelta = max((maxLon - minLon) * 1.5, 0.002)
+
+        return MKCoordinateRegion(
+            center: center,
+            span: MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
+        )
     }
 
     private func updatePace() {
